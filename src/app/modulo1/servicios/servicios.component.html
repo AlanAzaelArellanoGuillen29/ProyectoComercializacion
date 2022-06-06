@@ -1,0 +1,13 @@
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div *ngFor="let a of recuperatarjetas" class="col">
+    <div class="card">
+      <img src="{{a.imagen2}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{a.titulo2}}</h5>
+        <p class="card-text">{{a.descripcion2}}</p>
+        <button (click)="recuperarid(a.idtarjetas)" type="button" [routerLink]="['detalletarjeta', a.idtarjetas]" class="btn btn-outline-light"> <img src="{{a.icono2}}" class="card-img-top" alt="...">Ver más</button>
+        <!-- <button type="button" class="btn btn-outline-dark">Ver más</button>-->
+      </div>
+    </div>
+  </div>
+</div>
